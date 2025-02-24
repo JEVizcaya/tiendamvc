@@ -1,6 +1,7 @@
 <?php
 namespace Formacom\controllers;
 use Formacom\Core\Controller;
+use Formacom\Models\User;
 
 
 class LoginController extends Controller{
@@ -10,10 +11,17 @@ class LoginController extends Controller{
     }
     public function login(...$params){
         if(isset($_POST["username"])){
-            var_dump($_POST);
+            $user=User::where("username",$_POST["username"])->first();
+            if(password_verify($_POST["password"],$user->password)){
+                echo "user ok";
+            }else{
+                echo "user no ok";
+            }
+            //var_dump($user->password);
+            
             exit();
         }else{
-            $this->view("new_actor"); 
+           header("Location: ".base_url()."login");
         }
        
     }

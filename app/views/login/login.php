@@ -21,14 +21,14 @@
           <!-- Email input -->
           <div data-mdb-input-init class="form-outline mb-4">
             <input type="text" name="username" id="form3Example3" class="form-control form-control-lg"
-              placeholder="Enter a  username" />
+              placeholder="Enter a  username" required />
             <label class="form-label" for="form3Example3"> Username</label>
           </div>
 
           <!-- Password input -->
           <div data-mdb-input-init class="form-outline mb-3">
             <input type="password" name="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
+              placeholder="Enter password" required />
             <label class="form-label" for="form3Example4">Password</label>
           </div>
 

@@ -15,7 +15,8 @@ class LoginController extends Controller{
             if(password_verify($_POST["password"],$user->password)){
                 echo "user ok";
             }else{
-                echo "user no ok";
+                $error="User or Pass incorrect";
+                $this->view("login", $error);
             }
             //var_dump($user->password);
             

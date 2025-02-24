@@ -13,7 +13,11 @@ class LoginController extends Controller{
         if(isset($_POST["username"])){
             $user=User::where("username",$_POST["username"])->first();
             if($user && password_verify($_POST["password"],$user->password)){
-                echo "user ok";
+                session_start();
+                $_SESSION["user_id"]=$user->user_id;
+                $_SESSION["username"]=$user->username;
+               header("Location:".base_url()."admin");
+
             }else{
                 $error="User or Pass incorrect";
                 $this->view("login", [$error]);
@@ -31,17 +35,7 @@ class LoginController extends Controller{
         $this->view("register");
     }
 
-    public function json(){
-        $actores=Actor::where("first_name","like","P%")->get();
-        $datos=[
-            "mensaje"=>"Listado actores empiezan P",
-            "listado"=>$actores
-        ];
-        $json=json_encode($datos);
-        header('Content-Type: application/json');
-        echo $json;
-        exit();
-    }
+    
 
 }
 ?>

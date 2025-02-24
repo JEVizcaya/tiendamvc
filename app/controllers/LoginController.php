@@ -12,11 +12,11 @@ class LoginController extends Controller{
     public function login(...$params){
         if(isset($_POST["username"])){
             $user=User::where("username",$_POST["username"])->first();
-            if(password_verify($_POST["password"],$user->password)){
+            if($user && password_verify($_POST["password"],$user->password)){
                 echo "user ok";
             }else{
                 $error="User or Pass incorrect";
-                $this->view("login", $error);
+                $this->view("login", [$error]);
             }
             //var_dump($user->password);
             

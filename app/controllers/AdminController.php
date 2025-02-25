@@ -6,7 +6,7 @@ class AdminController extends Controller{
     public function index(...$params){
         $customer=new Customer();
        
-        $customer->name="Antonia";
+        $customer->name="Carlos";
         $customer->save();
         $data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
         $this->view('home', $data);

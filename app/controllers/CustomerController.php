@@ -6,10 +6,10 @@ use Formacom\Models\Address;
 use Formacom\Models\Phone;
 class CustomerController extends Controller{
     public function index(...$params){
-
+        $customers=Customer::all();
 // Envía datos a la vista
-$data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
-$this->view('home', $data);
+//$data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
+$this->view('home', $customers);
 }
 }
 ?>

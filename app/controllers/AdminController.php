@@ -1,13 +1,13 @@
 <?php
 namespace Formacom\controllers;
 use Formacom\Core\Controller;
-use Formacom\Models\Customer;
+use Formacom\Models\Phone;
 class AdminController extends Controller{
     public function index(...$params){
-        $customer=new Customer();
+        $phone=new Phone();
        
-        $customer->name="Carlos";
-        $customer->save();
+        $phone->number="999999999";
+        $phone->save();
         $data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
         $this->view('home', $data);
     }

@@ -11,5 +11,18 @@ class CustomerController extends Controller{
 //$data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
 $this->view('home', $customers);
 }
+public function show(...$params){
+    if(isset($params[0])){
+        $customer=Customer::find($params[0]);
+        if($customer){
+            $this->view('detail',$customer);
+            exit();
+
+        }
+    }
+    header("Location: ".base_url()."customer");
+
+
+}
 }
 ?>

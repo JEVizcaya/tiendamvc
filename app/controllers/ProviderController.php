@@ -6,22 +6,23 @@ use Formacom\Models\Address;
 use Formacom\Models\Phone;
 class ProviderController extends Controller{
     public function index(...$params){
-        $provider=Provider::all();
+        $customers=Provider::all();
 // Envía datos a la vista
 //$data = ['mensaje' => '¡Bienvenido a la página de inicio!'];
-$this->view('home', $provider);
+$this->view('home', $customers);
 }
 public function show(...$params){
     if(isset($params[0])){
-        $provider=Provider::find($params[0]);
-        if($provider){
-            $this->view('detail',$provider);
+        $customer=Provider::find($params[0]);
+        if($customer){
+            $this->view('detail',$customer);
             exit();
+
         }
     }
-    header("Location: ".base_url()."provider");
+    header("Location: ".base_url()."customer");
+
+
 }
-
-
 }
 ?>

@@ -8,7 +8,7 @@ class AdminController extends Controller{
     public function index(...$params){
 // Crea o encuentra el cliente
 $customer = new Customer();
-        
+ /*       
 // Asigna atributos al cliente
 $customer->name = "Luis";
 $customer->save();
@@ -31,7 +31,7 @@ $customer->phones()->save($phone); // Asegúrate de que haya una relación 'phon
 // Opcional: asegurarse de que tanto el cliente como la dirección y el teléfono están guardados
 $customer->save();
 $address->save();
-$phone->save();
+$phone->save(); */
 
 // Envía datos a la vista
 $data = ['mensaje' => '¡Bienvenido a la página de inicio!'];

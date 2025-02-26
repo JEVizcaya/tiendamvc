@@ -32,13 +32,14 @@
             </div>
             <div class="form-group">
                 <label for="inputAddress">Categoria</label>
-                <select  id="category">
+                <select  id="category" required>
+                    <option  selected> Choose...</option>
 
                 </select>
             </div>
             <div class="form-group">
                 <label for="">Provider</label>
-                <select  id="provider">
+                <select  id="provider" required>
                     
                 </select>
             </div>

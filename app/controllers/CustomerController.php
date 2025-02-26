@@ -17,12 +17,43 @@ public function show(...$params){
         if($customer){
             $this->view('detail',$customer);
             exit();
-
         }
     }
     header("Location: ".base_url()."customer");
+}
+
+    // CustomerController.php
 
 
+
+    public function new(){
+        if(isset($_POST["name"])){
+            $customer=new Customer();
+            $customer->name=$_POST["name"];
+            $customer->save();
+            if(isset($_POST["street"]) && $_POST["street"]!=""){
+                $address=new Address();
+                $address->street=$_POST["street"];
+                $address->zip_code=$_POST["zip_code"];
+                $address->city=$_POST["city"];
+                $address->country=$_POST["country"];
+                $customer->addresses()->save($address);
+            }
+            if(isset($_POST["phonenumber"])&&$_POST["phonenumber"]!=""){
+                $phone=new Phone();
+                $phone->number=$_POST["phonenumber"];
+                $customer->phones()->save($phone);
+            }
+            header("Location: ".base_url()."customer");
+
+            
+        }
+        $this->view("new");
 }
+
 }
+
+
+
+
 ?>

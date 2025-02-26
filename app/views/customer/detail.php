@@ -22,6 +22,7 @@
                 <span class="navbar-text">
                     Detalle Cliente
                 </span>
+                <a href="<?=base_url()?>/customer/home"  style="color:white" >Home</a>
             </div>
 
         </nav>

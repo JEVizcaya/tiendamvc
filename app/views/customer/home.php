@@ -21,6 +21,8 @@
                 <span class="navbar-text">
                     lista de clientes
                 </span>
+                <a href="<?=base_url()?>/customer/new"  style="color:white">New Client</a>
+                
             </div>
 
         </nav>

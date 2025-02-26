@@ -11,6 +11,7 @@
     <div class="container">
         <nav class="navbar navbar-light bg-light">
             <span class="navbar-brand mb-0 h1">Shop<i class="fa-solid fa-shop"></i></span>
+            
         </nav>
         <h3>New Customer</h3>
         <form action="" method="post">

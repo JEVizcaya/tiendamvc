@@ -19,11 +19,11 @@
         <nav class="navbar navbar-light bg-light">
             <span class="navbar-brand mb-0 h1">New Product</span>
         </nav>
-        <form>
+        <form id="form">
             <div class="form-row">
                 <div class="form-group col-12">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Product name">
+                    <input type="text" class="form-control" id="name" placeholder="Product name" required>
                 </div>
                 <div class="form-group col-12">
                     <label for="street">Description</label>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputAddress">Categoria</label>
+                <label for="inputAddress">Category</label>
                 <select  id="category" required>
                     <option  selected> Choose...</option>
 

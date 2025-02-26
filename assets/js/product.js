@@ -24,3 +24,17 @@ fetch ("http://localhost/tiendamvc/api/providers")
 .catch(err=>{
     console.log(err);
 })
+document.getElementById("form").onsubmit=function(e){
+e.preventDefault(); //con esto no se envia el formulario
+let product={
+    'name': document.getElementById("name"). value,
+    'description': document.getElementById("description"). value,
+    'category_id': document.getElementById("category"). value,
+    'provider_id': document.getElementById("provider"). value,
+    'stock': document.getElementById("stock"). value,
+    'price': document.getElementById("price"). value
+    
+
+}
+console.groupCollapsed(product);
+}

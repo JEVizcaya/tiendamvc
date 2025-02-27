@@ -47,11 +47,11 @@
             <div class="row">
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="stock">Stock</label>
-                    <input  type="number" min="0"  class="form-control" id="stock" placeholder="Stock">
+                    <input  type="number" min="0"  class="form-control" id="stock" placeholder="Stock" required>
                 </div>
                 <div class="form-group col-md-6 col-sm-12">
                     <label for="price">Price</label>
-                    <input  type="number" min="0"  class="form-control" id="price" placeholder="Price">
+                    <input  type="number" step="0.01" min="0"  class="form-control" id="price" placeholder="Price" required>
                 </div>
             </div>
             

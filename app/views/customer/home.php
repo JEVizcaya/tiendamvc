@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,7 @@
 
             <div class="container-fluid">
                 <span class="navbar-text">
-                    lista de clientes
+                    Customers list
                 </span>
                 <a href="<?= base_url() ?>/customer/new" style="color:white">New Client</a>
 

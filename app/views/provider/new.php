@@ -13,12 +13,12 @@
             <span class="navbar-brand mb-0 h1">Shop<i class="fa-solid fa-shop"></i></span>
             
         </nav>
-        <h3>New Customer</h3>
+        <h3>New Provider</h3>
         <form action="" method="post">
             <div class="form-row">
                 <div class="form-group col-12">
                     <label for="name">Name</label>
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Customer name">
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Provider name">
                 </div>
                 <div class="form-group col-12">
                     <label for="street">Address</label>

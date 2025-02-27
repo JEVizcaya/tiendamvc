@@ -10,37 +10,37 @@
 <body>
 
 <div class="container mt-5">
-    <h1>Editar Cliente: <?= htmlspecialchars($customer->name) ?></h1>
+    <h1>Customer edit: <?= htmlspecialchars($data->name) ?></h1>
 
     <!-- Formulario de edición del cliente -->
-    <form action="<?= base_url() ?>customer/edit/<?= $customer->customer_id ?>" method="POST">
+    <form action="<?= base_url() ?>customer/edit/<?= $data->customer_id ?>" method="POST">
         <div class="mb-3">
             <label for="name" class="form-label">Nombre del Cliente</label>
-            <input type="text" class="form-control" id="name" name="name" value="<?= htmlspecialchars($customer->name) ?>" required>
+            <input type="text" class="form-control" id="name" name="name" value="<?= htmlspecialchars($data->name) ?>" required>
         </div>
 
         <h3 class="mt-4">Dirección</h3>
         <div class="mb-3">
             <label for="street" class="form-label">Calle</label>
-            <input type="text" class="form-control" id="street" name="street" value="<?= htmlspecialchars($customer->addresses()->first()->street ?? '') ?>" required>
+            <input type="text" class="form-control" id="street" name="street" value="<?= htmlspecialchars($data->addresses()->first()->street ?? '') ?>" required>
         </div>
         <div class="mb-3">
             <label for="zip_code" class="form-label">Código Postal</label>
-            <input type="text" class="form-control" id="zip_code" name="zip_code" value="<?= htmlspecialchars($customer->addresses()->first()->zip_code ?? '') ?>" required>
+            <input type="text" class="form-control" id="zip_code" name="zip_code" value="<?= htmlspecialchars($data->addresses()->first()->zip_code ?? '') ?>" required>
         </div>
         <div class="mb-3">
             <label for="city" class="form-label">Ciudad</label>
-            <input type="text" class="form-control" id="city" name="city" value="<?= htmlspecialchars($customer->addresses()->first()->city ?? '') ?>" required>
+            <input type="text" class="form-control" id="city" name="city" value="<?= htmlspecialchars($data->addresses()->first()->city ?? '') ?>" required>
         </div>
         <div class="mb-3">
             <label for="country" class="form-label">País</label>
-            <input type="text" class="form-control" id="country" name="country" value="<?= htmlspecialchars($customer->addresses()->first()->country ?? '') ?>" required>
+            <input type="text" class="form-control" id="country" name="country" value="<?= htmlspecialchars($data->addresses()->first()->country ?? '') ?>" required>
         </div>
 
         <h3 class="mt-4">Teléfono</h3>
         <div class="mb-3">
             <label for="phonenumber" class="form-label">Número de Teléfono</label>
-            <input type="text" class="form-control" id="phonenumber" name="phonenumber" value="<?= htmlspecialchars($customer->phones()->first()->number ?? '') ?>" required>
+            <input type="text" class="form-control" id="phonenumber" name="phonenumber" value="<?= htmlspecialchars($data->phones()->first()->number ?? '') ?>" required>
         </div>
 
         <!-- Botón para enviar el formulario -->

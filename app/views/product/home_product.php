@@ -58,6 +58,23 @@
 
             <button type="submit" class="btn col-12 btn-primary">Save</button>
         </form>
+        <hr>
+        <table class="table table-dark table-striped w-auto mx-auto">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Provider</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody id="products">   
+
+            </tbody>
+        </table>
     </div>
 </body>
 

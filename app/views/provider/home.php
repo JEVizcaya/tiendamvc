@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,8 +19,9 @@
 
             <div class="container-fluid">
                 <span class="navbar-text">
-                    lista de Proveedores
+                    Providers list
                 </span>
+                <a href="<?= base_url() ?>/customer/new" style="color:white">New Provider</a>
             </div>
 
         </nav>
@@ -40,9 +41,13 @@
                         <th scope="row"><?=$provider->provider_id?></th>
                         <td><?=$provider->name?></td>
                         <td>
-                        <i class="fa-solid fa-user-pen"></i>
-                        <i class="fa-solid fa-trash"></i>
-                        <a href="<?=base_url()?>provider/show/<?=$provider->provider_id?>"><i class="fa-solid fa-eye"></i></a>
+                        <a href="<?= base_url() ?>provider/edit/<?= $provider->provider_id ?>"><i
+                                    class="fa-solid fa-user-pen" style="color:white"></i></a>
+                                    <a href="<?= base_url() ?>provider/show/<?= $provider->provider_id ?>"><i
+                                    class="fa-solid fa-eye" style="color:white"></i></a>
+                            <a href="<?= base_url() ?>provider/delete/<?= $provider->provider_id ?>" class="btn btn-danger"
+                                onclick="return confirm('¿Estás seguro de que deseas eliminar este cliente?');"><i
+                                    class="fa-solid fa-trash"></i></a>
                         </td>
 
                     </tr>

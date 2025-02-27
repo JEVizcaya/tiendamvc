@@ -6,51 +6,98 @@
     <title>Editar Cliente</title>
     <!-- Vinculamos el CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ZvpUoO/+PpPHZg2BzmA4i8d3ni43mjV8w1cAn5cr1FxzYs5Wbsz5f4dZNEES3A2T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-<div class="container mt-5">
-    <h1>Customer edit: <?= htmlspecialchars($data->name) ?></h1>
+<div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">Shop<i class="fa-solid fa-shop"></i></span>
+            
+        </nav>
+        <h3>Customer Edit</h3>
+        <form action="" method="post">
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Customer name">
+                </div>
+                <div class="form-group col-12">
+                    <label for="street">Address</label>
+                    <input name="street" type="text" class="form-control" id="street" placeholder="1234 Main St">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Zip Code</label>
+                <input name="zip_code" type="number" class="form-control" id="zipcode" placeholder="Zip Code">
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-sm-12">
+                    <label for="inputCity">City</label>
+                    <input name="city" type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-6 col-sm-12">
+                    <label for="inputState">Country</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Bielorrusia">Bielorrusia</option>
+                        <option value="Bélgica">Bélgica</option>
+                        <option value="Bosnia y Herzegovina">Bosnia y Herzegovina</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Croacia">Croacia</option>
+                        <option value="Chipre">Chipre</option>
+                        <option value="República Checa">República Checa</option>
+                        <option value="Dinamarca">Dinamarca</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Finlandia">Finlandia</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="Grecia">Grecia</option>
+                        <option value="Hungría">Hungría</option>
+                        <option value="Islandia">Islandia</option>
+                        <option value="Irlanda">Irlanda</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Letonia">Letonia</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lituania">Lituania</option>
+                        <option value="Luxemburgo">Luxemburgo</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Moldavia">Moldavia</option>
+                        <option value="Mónaco">Mónaco</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Países Bajos">Países Bajos</option>
+                        <option value="Macedonia del Norte">Macedonia del Norte</option>
+                        <option value="Noruega">Noruega</option>
+                        <option value="Polonia">Polonia</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Rumania">Rumania</option>
+                        <option value="Rusia">Rusia</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Eslovaquia">Eslovaquia</option>
+                        <option value="Eslovenia">Eslovenia</option>
+                        <option value="España">España</option>
+                        <option value="Suecia">Suecia</option>
+                        <option value="Suiza">Suiza</option>
+                        <option value="Turquía">Turquía</option>
+                        <option value="Ucrania">Ucrania</option>
+                        <option value="Reino Unido">Reino Unido</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phonenumber">Phone number</label>
+                <input name="phonenumber" type="number" class="form-control" id="phonenumber" placeholder="Phone Number">
+            </div>
 
-    <!-- Formulario de edición del cliente -->
-    <form action="<?= base_url() ?>customer/edit/<?= $data->customer_id ?>" method="POST">
-        <div class="mb-3">
-            <label for="name" class="form-label">Nombre del Cliente</label>
-            <input type="text" class="form-control" id="name" name="name" value="<?= htmlspecialchars($data->name) ?>" required>
-        </div>
-
-        <h3 class="mt-4">Dirección</h3>
-        <div class="mb-3">
-            <label for="street" class="form-label">Calle</label>
-            <input type="text" class="form-control" id="street" name="street" value="<?= htmlspecialchars($data->addresses()->first()->street ?? '') ?>" required>
-        </div>
-        <div class="mb-3">
-            <label for="zip_code" class="form-label">Código Postal</label>
-            <input type="text" class="form-control" id="zip_code" name="zip_code" value="<?= htmlspecialchars($data->addresses()->first()->zip_code ?? '') ?>" required>
-        </div>
-        <div class="mb-3">
-            <label for="city" class="form-label">Ciudad</label>
-            <input type="text" class="form-control" id="city" name="city" value="<?= htmlspecialchars($data->addresses()->first()->city ?? '') ?>" required>
-        </div>
-        <div class="mb-3">
-            <label for="country" class="form-label">País</label>
-            <input type="text" class="form-control" id="country" name="country" value="<?= htmlspecialchars($data->addresses()->first()->country ?? '') ?>" required>
-        </div>
-
-        <h3 class="mt-4">Teléfono</h3>
-        <div class="mb-3">
-            <label for="phonenumber" class="form-label">Número de Teléfono</label>
-            <input type="text" class="form-control" id="phonenumber" name="phonenumber" value="<?= htmlspecialchars($data->phones()->first()->number ?? '') ?>" required>
-        </div>
-
-        <!-- Botón para enviar el formulario -->
-        <button type="submit" class="btn btn-primary">Actualizar Cliente</button>
-        <a href="<?= base_url() ?>customer" class="btn btn-secondary">Cancelar</a>
-    </form>
-</div>
-
-<!-- Vinculamos el JavaScript de Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kaB4miVsoxgOswq3XsDCp2t5Q2t5rwFdGl8q3hLlJWZqHE+Vks9a0P/j8gGQLF1V" crossorigin="anonymous"></script>
-
+            <button type="submit" class="btn col-12 btn-primary">Save</button>
+        </form>
+    </div>
 </body>
+
 </html>

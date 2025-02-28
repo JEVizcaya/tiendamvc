@@ -1,3 +1,204 @@
-body{
-    background-color: yellow;
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px 5px 0 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .fa-shop {
+    margin-left: 5px;
+}
+
+/* Title Styling */
+h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input and Select Styling */
+.form-control {
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0062cc;
+    outline: none;
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Button Styling */
+button.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Form Row Styling */
+.form-row .form-group {
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Asegura que las celdas estén bien alineadas */
+    margin-top: 30px; /* Añadimos un margen superior */
+}
+
+th, td {
+    padding: 12px; /* Espacio dentro de las celdas */
+    text-align: left; /* Alineación del texto */
+    font-size: 16px; /* Tamaño de fuente para texto de tabla */
+}
+
+th {
+    background-color: #343a40; /* Color de fondo para las cabeceras */
+    color: white; /* Color del texto de las cabeceras */
+    font-weight: bold; /* Texto en negrita para las cabeceras */
+}
+
+td {
+    background-color: #f8f9fa; /* Color de fondo para las filas de datos */
+    color: #333; /* Color del texto */
+    border-bottom: 1px solid #dee2e6; /* Líneas de separación entre filas */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Fondo cuando se pasa el ratón sobre una fila */
+    cursor: pointer;
+}
+
+.table-dark {
+    background-color: #343a40; /* Fondo oscuro para la tabla */
+    color: white; /* Texto blanco para la tabla */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9ecef; /* Color de fondo alternado para las filas impares */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa; /* Color de fondo alternado para las filas pares */
+}
+
+/* Resaltar las celdas cuando pasas el ratón sobre ellas */
+td:hover {
+    background-color: #e2e6ea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hacer que los campos del formulario ocupen todo el ancho */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%; /* Hace que los campos de formulario ocupen todo el ancho */
+    }
+
+    /* Ajustes en la tabla */
+    table {
+        font-size: 14px; /* Reduce el tamaño de fuente para pantallas pequeñas */
+    }
+
+    th, td {
+        padding: 10px; /* Reduce el padding en celdas */
+    }
+
+    /* Botón de la tabla y formularios */
+    button.btn-primary {
+        padding: 10px; /* Reducir padding del botón */
+        font-size: 14px; /* Reducir tamaño de texto */
+    }
+
+    /* Asegura que las tablas sean scrollables en pantallas pequeñas */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reducir tamaño de los títulos en pantallas más pequeñas */
+    .navbar-brand {
+        font-size: 18px; /* Tamaño más pequeño para el logo */
+    }
+
+    h3 {
+        font-size: 20px; /* Tamaño de título reducido */
+    }
+
+    .form-group label {
+        font-size: 14px; /* Etiquetas más pequeñas */
+    }
+
+    .form-control {
+        font-size: 14px; /* Reducir el tamaño de la fuente de los inputs */
+    }
 }

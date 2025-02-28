@@ -12,17 +12,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body style="margin-top:50px">
 
     <div class="container">
         <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
 
             <div class="container-fluid">
-                <span class="navbar-text">
-                    Customers list
+                <span class="navbar-text" style="color:white">
+                    Customers List
                 </span>
-                <a href="<?= base_url() ?>/customer/new" style="color:white">New Client</a>
-
+                <div>
+                <a href="<?= base_url() ?>customer/new" style="color:white"><input type="button" value="New Customer"></a>
+                <a href="<?= base_url() ?>admin" style="color:white"><input type="button" value="Home"></a>
+                </div>
             </div>
 
         </nav>
@@ -32,8 +34,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Operations</th>
-
-
                 </tr>
             </thead>
             <tbody>
@@ -43,20 +43,19 @@
                         <th scope="row"><?= $customer->customer_id ?></th>
                         <td><?= $customer->name ?></td>
                         <td>
-                            <a href="<?= base_url() ?>customer/edit/<?= $customer->customer_id ?>"><i
-                                    class="fa-solid fa-user-pen" style="color:white"></i></a>
-                                    <a href="<?= base_url() ?>customer/show/<?= $customer->customer_id ?>"><i
-                                    class="fa-solid fa-eye" style="color:white"></i></a>
-                            <a href="<?= base_url() ?>customer/delete/<?= $customer->customer_id ?>" class="btn btn-danger"
-                                onclick="return confirm('¿Estás seguro de que deseas eliminar este cliente?');"><i
-                                    class="fa-solid fa-trash"></i></a>
 
                             
-                        </td>
+                            <a href="<?= base_url() ?>customer/edit/<?= $customer->customer_id ?>" title="Edit">
+                                <i class="fa-solid fa-user-pen" style="color: chartreuse; margin-right: 10px;"></i></a>
+                            <a href="<?= base_url() ?>customer/show/<?= $customer->customer_id ?>" title="Details">
+                                <i class="fa-solid fa-eye" style="color: aqua; margin-right: 10px;"></i></a>
+                            <a href="<?= base_url() ?>customer/delete/<?= $customer->customer_id ?>"
+                                onclick="return confirm('¿Estás seguro de que deseas eliminar este cliente?');"
+                                title="Delete"><i class="fa-solid fa-trash" style="color: red"></i></a>
 
+                        </td>
                     </tr>
                 <?php } ?>
-
 
             </tbody>
         </table>

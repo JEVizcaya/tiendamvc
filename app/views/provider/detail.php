@@ -22,13 +22,14 @@
                 <span class="navbar-text">
                     Providers Details
                 </span>
-                <a href="<?=base_url()?>/customer/home"  style="color:white" >Home</a>
+                <a href="<?= base_url() ?>provider" style="font-size: larger;color: white;background-color: dimgrey;">
+                    <input type="button"value="Providers"></a>
             </div>
 
         </nav>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header" style="margin: revert;padding-left: 10px;">
                     <?= $data->name ?>
                 </h2>
 
@@ -59,7 +60,7 @@
                                             <td><?= $address->street ?></td>
                                             <td><?= $address->city ?></td>
                                             <td><?= $address->zip_code ?></td>
-                                            <td><?= $address->Country ?></td>
+                                            <td><?= $address->country ?></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>

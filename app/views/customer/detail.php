@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer</title>
+    <title>Customer Details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -13,22 +13,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body style="margin-top:50px">
 
     <div class="container">
         <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
 
             <div class="container-fluid">
-                <span class="navbar-text">
+                <span class="navbar-text" style="color:white">
                     Customer Details
                 </span>
-                <a href="<?=base_url()?>/customer/home"  style="color:white" >Home</a>
+                <a href="<?= base_url() ?>customer" style="font-size: larger;color: white;background-color: dimgrey;">
+                    <input type="button"value="Customers"></a>
             </div>
 
         </nav>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h2 class="accordion-header" style="margin: revert;padding-left: 10px;">
                     <?= $data->name ?>
                 </h2>
 
@@ -59,7 +60,7 @@
                                             <td><?= $address->street ?></td>
                                             <td><?= $address->city ?></td>
                                             <td><?= $address->zip_code ?></td>
-                                            <td><?= $address->Country ?></td>
+                                            <td><?= $address->country ?></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
@@ -91,7 +92,7 @@
                                     <?php foreach ($data->phones as $key => $phone) { ?>
                                         <tr>
                                             <th scope="" row><?= $phone->phone_id ?></th>
-                                            
+
                                             <td><?= $phone->number ?></td>
 
                                         </tr>

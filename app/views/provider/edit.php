@@ -17,11 +17,11 @@
     <div class="container">
         <nav class="navbar navbar-light bg-light">
             <span class="navbar-brand mb-0 h1">Store<i class="fa-solid fa-shop"></i></span>
-            <a href="<?= base_url() ?>customer" style="color:white"><input type="button"
-                        value="Customers"></a>
+            <a href="<?= base_url() ?>provider" style="color:white"><input type="button"
+                        value="Providers"></a>
 
         </nav>
-        <h3>Edit Customer</h3>
+        <h3>Edit Provider</h3>
         <form action="" method="post">
 
             <div class="form-row">

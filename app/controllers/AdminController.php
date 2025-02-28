@@ -34,7 +34,7 @@ $address->save();
 $phone->save(); */
 
 // Envía datos a la vista
-$data = ['mensaje' => 'Wellcome to my Shop'];
+$data = ['mensaje' => 'Welcome to my Store'];
 $this->view('home', $data);
 }
 }

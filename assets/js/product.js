@@ -61,10 +61,11 @@ document.getElementById("form").onsubmit = function (e) {
 function showproducts(datos){   
     let tbody = document.getElementById("products");
     tbody.innerHTML = "";
+    let counter=1;
     datos.forEach(element => {
         let tr = document.createElement("tr");
         let td = document.createElement("td");
-        td.textContent = element.product_id;
+        td.textContent = counter++;
         tr.appendChild(td);
         td = document.createElement("td");
         td.textContent = element.name;

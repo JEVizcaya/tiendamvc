@@ -39,9 +39,10 @@
             </thead>
             <tbody>
 
-                <?php foreach ($data as $key => $provider) { ?>
+                <?php $counter=1;
+                foreach ($data as $key => $provider) { ?>
                     <tr>
-                        <th scope="row"><?=$provider->provider_id?></th>
+                        <th scope="row"><?=$counter++?></th>
                         <td><?=$provider->name?></td>
                         <td>
                         <a href="<?= base_url() ?>provider/edit/<?= $provider->provider_id ?>" title="Edit">

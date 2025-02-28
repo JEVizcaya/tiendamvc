@@ -8,7 +8,7 @@ body {
 
 /* Container Styling */
 .container {
-    max-width: 800px;
+    max-width: 100%; /* Establece el contenedor para ocupar todo el ancho disponible */
     margin: 50px auto;
     padding: 20px;
     background-color: white;
@@ -64,6 +64,7 @@ form {
     border: 1px solid #ced4da;
     box-shadow: none;
     transition: border-color 0.3s ease;
+    width: 100%; /* Asegura que los inputs lleguen hasta el final del div */
 }
 
 .form-control:focus {
@@ -86,7 +87,7 @@ button.btn-primary {
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    width: 100%;
+    width: 100%; /* Asegura que los botones ocupen el 100% de ancho */
 }
 
 button.btn-primary:hover {
@@ -146,7 +147,15 @@ tr:hover {
 td:hover {
     background-color: #e2e6ea;
 }
-
+#category,#provider{
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    box-shadow: none;
+    transition: border-color 0.3sease;
+    width: 100%;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Hacer que los campos del formulario ocupen todo el ancho */

@@ -37,10 +37,11 @@
                 </tr>
             </thead>
             <tbody>
-
-                <?php foreach ($data as $key => $customer) { ?>
+                    
+                <?php $counter=1;
+                 foreach ($data as $key => $customer) { ?>
                     <tr>
-                        <th scope="row"><?= $customer->customer_id ?></th>
+                        <th scope="row"><?= $counter++ ?></th>
                         <td><?= $customer->name ?></td>
                         <td>
 
